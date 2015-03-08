@@ -1,6 +1,8 @@
 username: openmixbox
 phrases:
+  - bartender
   # - alcohol
-  - subscription box
+  # - subscription box
 hashtags:
-  # - Mixbox
+  - "#MIXBOX"
+  - "#mixbox"

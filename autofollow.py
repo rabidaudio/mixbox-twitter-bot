@@ -1,7 +1,7 @@
 import os
 from yaml import load, Loader
 
-count = 100
+count = 10
 
 config = load(open('settings.yml', 'r'), Loader=Loader)
 
@@ -15,10 +15,10 @@ if os.path.isfile('secret.yml'):
 
 from bot import twitter_follow_bot as Bot
 
-Bot.auto_follow_followers_for_user(config['username'])
+# Bot.auto_follow_followers_for_user(config['username']) # bad idea
 
 for phrase in config['phrases']:
-  Bot.auto_follow(phrase, count)
+  Bot.auto_follow(phrase, count=count)
 
 for hashtag in config['hashtags']:
-  Bot.auto_fav(hashtag, count)
+  Bot.auto_fav(hashtag, count=count)
